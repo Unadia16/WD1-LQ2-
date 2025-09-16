@@ -1,146 +1,190 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f0f2f5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: white;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    background: #1877f2;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
+  background: #1a1a1a;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
 }
 
-.nav-left {
-    font-size: 20px;
-    font-weight: bold;
+.left {
+  font-size: 20px;
+  font-weight: bold;
+  color: cyan;
 }
 
-.nav-center i,
-.nav-right i {
-    margin: 0 10px;
-    cursor: pointer;
+.center a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: magenta;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.right {
+  position: relative;
 }
 
 .dropbtn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  background: cyan;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: white;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #222;
+  min-width: 120px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px magenta;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+  background: magenta;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .container {
-    display: flex;
-    margin: 20px;
+  display: flex;
+  margin: 20px;
 }
 
-.main {
-    flex: 4;
-    margin-right: 20px;
-}
-
-.aside {
-    flex: 1;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+main {
+  width: 80%;
+  margin-right: 20px;
 }
 
 .card {
-    background: white;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #111;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px cyan;
 }
 
 .card img {
-    border: solid black 1px;
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 10px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
-.actions {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-    font-size: 14px;
-    color: #555;
+.post-header img {
+  width: 35px;  
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.post-header p {
+  margin: 0;   
+  line-height: 1.2;
+}
+
+.post-header .handle {
+  font-size: 11px; 
+  color: gray;
+}
+
+
+.actions button {
+  background: cyan;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: magenta;
+  color: white;
+}
+
+/* Aside */
+aside {
+  width: 20%;
+  padding: 15px;
+  background: #111;
+  border-radius: 10px;
+  box-shadow: 0 0 10px magenta;
 }
 
 .profile {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .profile img {
-    width: 80px;
-    height: 80px;
+    width: 100px; 
+    height: 100px;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 
-.friends-list img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-    justify-content: space-between;
+.friends {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .friend {
-    display: flex;
-    align-items: center;
-    margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1a1a;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px cyan;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #1877f2;
-    color: white;
-    margin-top: 20px;
+.friend img {
+    width: 35px; 
+    height: 35px;          
+    border-radius: 50%;
+    margin-right: 8px;
 }
 
-content img {
-    width: 50px;
-    height: 50%;
-    border: solid black;
+.friend .info {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 12px;
+}
+
+.friend strong {
+  font-size: 14px;
+  color: cyan;
+}
+
+.add {
+  background: cyan;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.add:hover {
+  background: magenta;
+  color: white;
 }
